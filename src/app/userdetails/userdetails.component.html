@@ -1,0 +1,69 @@
+<div class="userpage-wrapper">
+	<h2>User Details</h2>
+	<form class="user-form" [formGroup]="userForm" (ngSubmit)="this.onSubmit()">
+<!-- need to use ng class for errors -->
+		<!-- form -->
+	<!-- 	{% comment %} username should not be obscenity(validation check) {% endcomment %} -->
+		<div class="form-wrapper">
+			<label for="username">Name:
+			</label>
+			<input type="text" id="username" name="username" formControlName="username">
+		</div>
+
+<!-- need validation as well based on regex and async validator as well -->
+		<div class="form-wrapper">
+			<label for="contact">Contact:
+			</label>
+			<input type="text" id="contact" name="contact" formControlName="contactNumber"  autocomplete="off">
+			<div class="validation-error" *ngIf="userForm.get('contactNumber')!.invalid">Phone number details are incorrect!</div>
+		</div>
+		
+		<div class="form-wrapper">
+			<label for="mail">Mail id:
+			</label>
+			<input type="text" id="mail" name="mail" formControlName="mailId">
+		</div>
+		
+<!-- 
+		form control for radio buttons
+
+		https://angular.io/api/forms/RadioControlValueAccessor -->
+
+		<!-- button time -->
+		<div class="button-wrapper">
+			<span>Send Mails on approaching deadlines: </span>
+			<label for="mailyes">Yes
+			</label>
+			<input type="radio" id="mailyes" formControlName="mailAccess" [value]="true">
+			<label for="mailno">No
+			</label>
+			<input type="radio" id="mailno" formControlName="mailAccess" [value]="false">
+
+		</div>
+		<div class="button-wrapper">
+			<span>Receive alerts on approaching deadlines </span>
+			<label for="alertyes">Yes
+			</label>
+			<input type="radio" id="alertyes" formControlName="alertPermsn" [value]="true">
+			<label for="alertno">No
+			</label>
+			<input type="radio" id="alertno" formControlName="alertPermsn" [value]="false">
+
+		</div>
+
+		<div class="privacy-wrapper">
+			<label for="privacy-title">Choose how people can view your profile: </label>
+			<select id="privacy-title" formControlName="privacyOptions" (change)="privacyPolicyChange($event)">
+				<option value="public">Public</option>
+				<option value="private">Private</option>
+				<option value="friends">Friends only</option>
+			</select>
+
+		</div>
+		
+		
+		
+		<button type="submit">Submit</button>
+	</form>
+		
+</div>
