@@ -61,6 +61,12 @@ export class UserdetailsComponent implements OnInit{
 
   onSubmit(){
     // function to sync the frontend and backend on user settings
+
+    //  should not work if ny of the forms are invalid / button should be disabled
+    if(this.userForm.invalid){
+      console.log("Invalid values for form");
+      return;
+    }
     console.log("call gone to backend to send user details");
     this.userservice.setUserDetails();
   }

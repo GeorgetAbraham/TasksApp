@@ -12,8 +12,12 @@ export function phoneNumberValidator():ValidatorFn{
         else if(contrl.value.length!=10){
             return {invalidPhoneNumber:{error_message:"phone number length insufficient"}}
         }
-        
-
+        // regex matching for phone number to have length 10 and only numbers
+        const phoneRegex = /[0-9]{10}/;
+        const dum=phoneRegex.test(contrl.value);
+        if(!dum){
+            return {invalidPhoneNumber:{error_message:"Invalid characters entered"}};
+        }
         return null;
     }
 }

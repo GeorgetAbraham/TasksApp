@@ -1,6 +1,9 @@
 <div class="userpage-wrapper">
 	<h2>User Details</h2>
 	<form class="user-form" [formGroup]="userForm" (ngSubmit)="this.onSubmit()">
+		<!-- Need to align forms later!!!!! -->
+
+
 <!-- need to use ng class for errors -->
 		<!-- form -->
 	<!-- 	{% comment %} username should not be obscenity(validation check) {% endcomment %} -->
@@ -62,8 +65,9 @@
 		</div>
 		
 		
-		
-		<button type="submit">Submit</button>
+		 <!-- should not work if ny of the forms (or formgroup) are invalid / button should be disabled -->
+		 <!-- ngClass can be used to change styling of allowed and disallowed button -->
+		<button type="submit" [disabled]="this.userForm.invalid" [ngClass]="this.userForm.valid?'enabled-button':'disabled-button'">Submit</button>
 	</form>
 		
 </div>

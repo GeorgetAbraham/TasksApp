@@ -17,3 +17,14 @@
     color: rgb(184, 8, 8);
     border-width: 2px;
 }
+
+.enabled-button{
+    background-color: rgb(106, 105, 105);
+    color:black;
+}
+
+.disabled-button{
+    background-color: grey;
+    color:white;
+    opacity:0.5;
+}
