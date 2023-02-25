@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { TaskboardComponent } from './taskboard/taskboard.component';
+import { TaskboardComponent } from './taskboard-folder/taskboard/taskboard.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 

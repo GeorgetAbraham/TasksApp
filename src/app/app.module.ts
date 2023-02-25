@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
-import { TaskboardComponent } from './taskboard/taskboard.component';
+import { TaskboardComponent } from './taskboard-folder/taskboard/taskboard.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './taskboard-folder/sidebar/sidebar.component';
+import { BoardviewComponent } from './taskboard-folder/boardview/boardview.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavigationBarComponent,
     UserdetailsComponent,
     TaskboardComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+    BoardviewComponent
   ],
   imports: [
     BrowserModule,

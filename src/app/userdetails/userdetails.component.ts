@@ -63,6 +63,11 @@ export class UserdetailsComponent implements OnInit{
     // function to sync the frontend and backend on user settings
 
     //  should not work if ny of the forms are invalid / button should be disabled
+
+    // onSubmit SHOULD TRIGGER A MODAL/MATCOMPONENT POPUP THAT CONFIRMS IF CHANGES SHOULD REALLY BE MADE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // WILL BE DONE ON ADDING ANGULAR MATERIAL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
     if(this.userForm.invalid){
       console.log("Invalid values for form");
       return;
