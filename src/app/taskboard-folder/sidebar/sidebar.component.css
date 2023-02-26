@@ -1,0 +1,10 @@
+.sidebar-container{
+    background-color: rgb(73, 72, 72);
+    height: 100%;
+}
+
+.sidebar-link{
+    color:white;
+    padding:3px;
+    font-size: 17px;
+}

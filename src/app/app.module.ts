@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './taskboard-folder/sidebar/sidebar.component';
 import { BoardviewComponent } from './taskboard-folder/boardview/boardview.component';
+import { QuerybarComponent } from './taskboard-folder/querybar/querybar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BoardviewComponent } from './taskboard-folder/boardview/boardview.compo
     TaskboardComponent,
     HomeComponent,
     SidebarComponent,
-    BoardviewComponent
+    BoardviewComponent,
+    QuerybarComponent,
   ],
   imports: [
     BrowserModule,
