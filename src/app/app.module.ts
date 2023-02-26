@@ -13,6 +13,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './taskboard-folder/sidebar/sidebar.component';
 import { BoardviewComponent } from './taskboard-folder/boardview/boardview.component';
 import { QuerybarComponent } from './taskboard-folder/querybar/querybar.component';
+import { PlannerContainerComponent } from './taskboard-folder/plannerview/planner-container/planner-container.component';
+import { ColumnViewComponent } from './taskboard-folder/plannerview/column-view/column-view.component';
+import { ListViewComponent } from './taskboard-folder/plannerview/list-view/list-view.component';
+import { CalendarViewComponent } from './taskboard-folder/plannerview/calendar-view/calendar-view.component';
+import { TaskComponent } from './taskboard-folder/plannerview/task/task.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,11 @@ import { QuerybarComponent } from './taskboard-folder/querybar/querybar.componen
     SidebarComponent,
     BoardviewComponent,
     QuerybarComponent,
+    PlannerContainerComponent,
+    ColumnViewComponent,
+    ListViewComponent,
+    CalendarViewComponent,
+    TaskComponent,
   ],
   imports: [
     BrowserModule,

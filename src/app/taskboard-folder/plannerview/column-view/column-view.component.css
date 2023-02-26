@@ -1,0 +1,33 @@
+.columnview-container{
+    background-color: white;
+    min-height: 300px;
+    min-width:80%;
+    border-color: rgb(97, 96, 96);
+    border-width: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+
+    /* is inheriting from entire taskboard view for some reason 
+    need to resolve */
+}
+
+.column-container{
+    flex:1;
+    min-width: 200px;
+    background-color: rgb(227, 225, 225);
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+}
+
+task{
+    margin:1px;
+    background-color: whitesmoke;
+}

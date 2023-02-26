@@ -1,0 +1,27 @@
+<h3>Board by status</h3>
+<!-- jira view trying to show  tasks by status  -->
+<div class="columnview-container">
+
+	<div class="backlog-container column-container">
+	</div>
+
+
+	<div class="not-started-container column-container">
+		<task *ngFor="let task of this.taskByStatus['not started']" [task]="task"></task>
+	</div>
+
+	<div class="ongoing-container column-container">
+		<task *ngFor="let task of this.taskByStatus['ongoing']" [task]="task"></task>
+	</div>
+
+	<div class="successful-container column-container">
+		<task *ngFor="let task of this.taskByStatus['successful']" [task]="task"></task>
+	</div>
+
+	<div class="failed-container column-container">
+		<task *ngFor="let task of this.taskByStatus['failed']" [task]="task"></task>
+	</div>
+
+
+
+</div>

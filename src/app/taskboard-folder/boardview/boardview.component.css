@@ -7,3 +7,11 @@ app-querybar{
 .boardview-container{
 	height:100%;
 }
+
+app-planner-container{
+	height:100%;
+	padding-top:5px;
+	padding-bottom:10px;
+	background-color: rgb(244, 239, 239);
+	display: block;
+}
