@@ -15,8 +15,6 @@ export class QuerybarComponent {
   }
 
   public viewChange(){
-    // console.log("hi");
-    // console.log("change is here -> ",this.viewDropdown.value);
     this.viewFilterService.setviewMode(this.viewDropdown.value);
     
   }
