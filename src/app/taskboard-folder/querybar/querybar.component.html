@@ -8,7 +8,7 @@
 
 <!-- choose dropdown for type of view such as calendar view, list view or column/jira view -->
 
-<select id="taskboard-type">
+<select id="taskboard-type" (change) = viewChange() [formControl]="viewDropdown">
 <option value="calendar">Calendar view
 </option>
 <option value="list">List view

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ViewFilterHolderService } from 'src/app/service/view-filter-holder.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-querybar',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./querybar.component.css']
 })
 export class QuerybarComponent {
+
+  public viewDropdown=new FormControl('column');
+  constructor (private viewFilterService: ViewFilterHolderService){
+
+  }
+
+  public viewChange(){
+    // console.log("hi");
+    // console.log("change is here -> ",this.viewDropdown.value);
+    this.viewFilterService.setviewMode(this.viewDropdown.value);
+    
+  }
 
 }
