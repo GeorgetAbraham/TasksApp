@@ -4,8 +4,34 @@
 
 <!--  should be made draggable -->
 <div class="task-container">
-	<p>{{this.task.title}}</p>
-	<div>
-
+	<div class="task-header">
+		<div class="task-id">{{this.task.id}}</div>
+		<div class="task-header-side">
+			<div class="deadline">DeadLine: {{this.task['end-date']}}</div>
+			<i class="material-icons" *ngIf="this.task.priority === 2" style="color:rgb(230, 38, 38)">
+				priority_high
+			</i>
+			<i class="material-icons" *ngIf="this.task.priority === 1" style="color:  rgb(219, 119, 38)">
+				arrow_upward
+			</i>
+			<i class="material-icons" *ngIf="this.task.priority === 0" style="color:  rgb(108, 205, 56)">
+				arrow_downward
+			</i>
+			<!-- below one for unassigned prio -->
+			<!-- <i class="material-icons" *ngIf=>
+				priority_high
+			</i> -->
+		<!-- colour of deadline should vary across shades depending on how close to deadline we actually are -->
+			
+		</div>	
+	</div>
+	
+	<p class= "task-title">{{this.task.title | titlecase}}</p>
+	<div class="task-details">
+		<div class="task-description">
+			{{this.task.description}}
+		</div>
+		<div class="task-description">
+		</div>
 	</div>
 </div>

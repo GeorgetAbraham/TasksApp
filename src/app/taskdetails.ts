@@ -16,7 +16,7 @@ export const tasks: {[key:string]:Task}={
         priority:2,
         // priority is low, medium,high {0,1,2} maybe use enum?
         "start-date":"",
-        "end-date":"",
+        "end-date":"1-10-23",
         "status":"not started",
         // status is failed, ongoing, not started,successful
     },
