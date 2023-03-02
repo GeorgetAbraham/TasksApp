@@ -9,22 +9,22 @@
 
 	<div class="not-started-container column-container">
 		<div class="task-categories"> Not Picked up</div>
-		<task *ngFor="let task of this.taskByStatus['not started']" [task]="task"></task>
+		<column-task *ngFor="let task of this.taskByStatus['not started']" [task]="task"></column-task>
 	</div>
 
 	<div class="ongoing-container column-container">
 		<div class="task-categories"> Ongoing</div>
-		<task *ngFor="let task of this.taskByStatus['ongoing']" [task]="task"></task>
+		<column-task *ngFor="let task of this.taskByStatus['ongoing']" [task]="task"></column-task>
 	</div>
 
 	<div class="successful-container column-container">
-		<div class="task-categories"> Succesully Completed</div>
-		<task *ngFor="let task of this.taskByStatus['successful']" [task]="task"></task>
+		<div class="task-categories"> Succesfully Completed</div>
+		<column-task *ngFor="let task of this.taskByStatus['successful']" [task]="task"></column-task>
 	</div>
 
 	<div class="failed-container column-container">
 		<div class="task-categories"> Failed tasks</div>
-		<task *ngFor="let task of this.taskByStatus['failed']" [task]="task"></task>
+		<column-task *ngFor="let task of this.taskByStatus['failed']" [task]="task"></column-task>
 	</div>
 
 

@@ -17,7 +17,7 @@ import { PlannerContainerComponent } from './taskboard-folder/plannerview/planne
 import { ColumnViewComponent } from './taskboard-folder/plannerview/column-view/column-view.component';
 import { ListViewComponent } from './taskboard-folder/plannerview/list-view/list-view.component';
 import { CalendarViewComponent } from './taskboard-folder/plannerview/calendar-view/calendar-view.component';
-import { TaskComponent } from './taskboard-folder/plannerview/task/task.component';
+import { ColumnTaskComponent } from './task/column-task/column-task.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { TaskComponent } from './taskboard-folder/plannerview/task/task.componen
     ColumnViewComponent,
     ListViewComponent,
     CalendarViewComponent,
-    TaskComponent,
+    ColumnTaskComponent,
   ],
   imports: [
     BrowserModule,
