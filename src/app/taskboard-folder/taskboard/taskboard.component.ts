@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class TaskboardComponent {
 
+
+
+  public selectedTaskId:string|null=null; 
+
+
 }

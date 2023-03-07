@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./calendar-view.component.css']
 })
 export class CalendarViewComponent {
+  constructor(){
 
+  }
 }

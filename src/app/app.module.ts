@@ -18,6 +18,8 @@ import { ColumnViewComponent } from './taskboard-folder/plannerview/column-view/
 import { ListViewComponent } from './taskboard-folder/plannerview/list-view/list-view.component';
 import { CalendarViewComponent } from './taskboard-folder/plannerview/calendar-view/calendar-view.component';
 import { ColumnTaskComponent } from './task/column-task/column-task.component';
+import { TaskModalComponent } from './modals/task-modal/task-modal.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,15 @@ import { ColumnTaskComponent } from './task/column-task/column-task.component';
     ListViewComponent,
     CalendarViewComponent,
     ColumnTaskComponent,
+    TaskModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

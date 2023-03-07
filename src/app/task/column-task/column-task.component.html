@@ -5,7 +5,7 @@
 <!--  should be made draggable -->
 <div class="task-container">
 	<div class="task-header">
-		<div class="task-id">{{this.task.id}}</div>
+		<div class="task-id" (click)=openTaskModal()>{{this.task.id}}</div>
 		<div class="task-header-side">
 			<div class="deadline">DeadLine: {{this.task['end-date']}}</div>
 			<i class="material-icons" *ngIf="this.task.priority === 2" style="color:rgb(230, 38, 38)">
@@ -35,3 +35,5 @@
 		</div>
 	</div>
 </div>
+
+
