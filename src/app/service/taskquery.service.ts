@@ -6,6 +6,8 @@ import { Task,tasks } from '../taskdetails';
 })
 export class TaskqueryService {
 
+  // service used to store representation of task locally in app and is used to communicate with DB for task CRUD/ API calls and other operations
+
   public tasksRep:any;
   // tasks rep is representation tasks data that is being used for taskboard view for persistence purposes
   // will be removed when proper backend/mongodb queries are added for persistence 
@@ -48,6 +50,7 @@ export class TaskqueryService {
       }
     );
       console.log("tasksby status is : ",tasksbystat);
+      tasksbystat["backlog"]=[];
     return tasksbystat
   }
 

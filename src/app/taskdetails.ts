@@ -110,7 +110,7 @@ export const tasks: {[key:string]:Task}={
     },
     10:{
         id:"10",
-        title:"task1",
+        title:"task10",
         description:" generic description which should later allow embedding of links , should prevent script injection",
         priority:2,
         // priority is low, medium,high {0,1,2} maybe use enum?

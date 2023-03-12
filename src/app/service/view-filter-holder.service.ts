@@ -6,6 +6,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ViewFilterHolderService {
 
+  // this service holds the view such as column,calendar,list view + filter params . These together can be used to create query for API call to DB 
+  // for taskbystatus or any other task call in planning view
+
   public viewMode=new BehaviorSubject("column");
   constructor() { }
 

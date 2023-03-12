@@ -1,30 +1,30 @@
 <h3>Board by status</h3>
+<p>SHOULD PROVIDE OPTIONS TO SORT TASKS BY PRIO WITHIN THE COLUMNS AS WELL, DROPDOWN TO SORT BY PRIO!!!!</p>
 <!-- jira view trying to show  tasks by status  -->
-<div class="columnview-container">
-
-	<div class="backlog-container column-container">
+<div class="columnview-container" cdkDropListGroup>
+	<div class="backlog-container column-container" cdkDropList (cdkDropListDropped)=drop($event) [cdkDropListData]="this.taskByStatus['backlog']">
 		<div class="task-categories"> Backlog</div>
 	</div>
 
 
-	<div class="not-started-container column-container">
+	<div class="not-started-container column-container" cdkDropList (cdkDropListDropped)=drop($event) [cdkDropListData]="this.taskByStatus['not started']">
 		<div class="task-categories"> Not Picked up</div>
-		<column-task *ngFor="let task of this.taskByStatus['not started']" [task]="task"></column-task>
+		<column-task *ngFor="let task of this.taskByStatus['not started']" [task]="task" cdkDrag></column-task>
 	</div>
 
-	<div class="ongoing-container column-container">
+	<div class="ongoing-container column-container" cdkDropList (cdkDropListDropped)=drop($event) [cdkDropListData]="this.taskByStatus['ongoing']">
 		<div class="task-categories"> Ongoing</div>
-		<column-task *ngFor="let task of this.taskByStatus['ongoing']" [task]="task"></column-task>
+		<column-task *ngFor="let task of this.taskByStatus['ongoing']" [task]="task" cdkDrag></column-task>
 	</div>
 
-	<div class="successful-container column-container">
+	<div class="successful-container column-container" cdkDropList (cdkDropListDropped)=drop($event) [cdkDropListData]="this.taskByStatus['successful']">
 		<div class="task-categories"> Succesfully Completed</div>
-		<column-task *ngFor="let task of this.taskByStatus['successful']" [task]="task"></column-task>
+		<column-task *ngFor="let task of this.taskByStatus['successful']" [task]="task" cdkDrag></column-task>
 	</div>
 
-	<div class="failed-container column-container">
+	<div class="failed-container column-container" cdkDropList (cdkDropListDropped)=drop($event) [cdkDropListData]="this.taskByStatus['failed']">
 		<div class="task-categories"> Failed tasks</div>
-		<column-task *ngFor="let task of this.taskByStatus['failed']" [task]="task"></column-task>
+		<column-task *ngFor="let task of this.taskByStatus['failed']" [task]="task" cdkDrag></column-task>
 	</div>
 
 
