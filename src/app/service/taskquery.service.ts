@@ -49,8 +49,9 @@ export class TaskqueryService {
         }
       }
     );
-      console.log("tasksby status is : ",tasksbystat);
-      tasksbystat["backlog"]=[];
+    if(!tasksbystat['backlog']){
+      tasksbystat['backlog']=[];
+    }
     return tasksbystat
   }
 
