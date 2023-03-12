@@ -22,25 +22,18 @@ export class ColumnViewComponent {
     this.taskByStatus=taskQueryService.getTaskByStatus();
   }
 
-  drop(event:CdkDragDrop<any>){
+  drop(event:CdkDragDrop<{status:string}>){
 
     // CdkDragDrop<type> is for ControlContainer.data type
-
-    // !!!!!!!!! NEED TO FIGURE OUT TYPE OF CDKDRAGDROP VERY IMP
-// generic taking input of what type of array to put data in
    
-  
-    // NEED TO PREVENT REORDERING WITHIN SAME LIST THAT IS ORDER SHOULD NOT CHANGE
+    // NEED TO PREVENT REORDERING WITHIN SAME LIST THAT IS ORDER SHOULD NOT CHANGE = done using acdkDropListSortingDisabled
 
     if(event.previousContainer !== event.container){
       // trigger state change backend function as well as change value in the taskby status and taskrep as well
       transferArrayItem(this.taskByStatus[event.previousContainer.data['status']],this.taskByStatus[event.container.data['status']],event.previousIndex,event.currentIndex);
       // cdkdragdata can be accessed in .item.data, passing id of task for backend computation
-
-      // need to trigger change for status changes in taskrep
       this.taskQueryService.changeTaskStatus(event.container.data['status'],event.item.data);
       // since the object reference is update no need to update anywhere else
-
       // on changing view and coming back taskbystatus is recalled so no need to trigger extra call for in app rep
 
       // !!!!!!!!!!!!!!!!!!!need to make a backend API CALL TO UPDATE IN DB!!!!!!!
